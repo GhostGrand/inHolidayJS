@@ -2,8 +2,8 @@ import React from "react";
 import "../../App.css";
 export default function Registation() {
   return (
-    <div className="container">
-      <div className="text-align: center">
+    <div className="registration">
+      <div className="registration">
         <p>Регистрация</p>
         <ul>
           <li>
@@ -25,19 +25,19 @@ export default function Registation() {
           <li>
             <input
               className="form"
-              type="phone"
-              name="phone"
+              type="tel"
+              name="tel"
               placeholder="79197..."
             />
           </li>
-
-          <input
-            className="contacts_form"
-            type="text"
-            name="text"
-            placeholder="Иные контакты"
-          />
-
+          <li>
+            <input
+              className="contacts_form"
+              type="text"
+              name="text"
+              placeholder="Иные контакты"
+            />
+          </li>
           <button className="button">Зарегистрироваться</button>
         </ul>
       </div>
