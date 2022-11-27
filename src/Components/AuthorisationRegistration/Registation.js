@@ -25,8 +25,8 @@ export default function Registation() {
           <li>
             <input
               className="form"
-              type="tel"
-              name="tel"
+              type="number"
+              name="phone"
               placeholder="79197..."
             />
           </li>
