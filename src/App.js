@@ -1,8 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Form from "./Components/AuthorisationRegistration/Forms/Form";
 
 function App() {
-  return <div className="App">inHoliday</div>;
+  return (
+    <div className="App">
+      <Form></Form>
+    </div>
+  );
 }
 
 export default App;
