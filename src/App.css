@@ -97,3 +97,33 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.form {
+  /* color: red; */
+  /* background-color: rgb(255, 255, 255); */
+  /* box-shadow: 2px 2px 2px 0 rgb(128, 128, 128); */
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid grey;
+}
+
+.contacts_form {
+  margin-top: 10px;
+  /* padding: 10px; */
+  padding: 10px 100px 100px 10px;
+  border: 1px solid grey;
+}
+
+.button {
+  padding: 10px;
+  margin: 10px;
+  background: #0f2d39;
+  color: white;
+  width: 10%;
+}
+
+.registration {
+  text-align: center;
+  justify-content: center;
+  flex: content;
+}
