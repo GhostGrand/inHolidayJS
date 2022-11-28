@@ -27,7 +27,7 @@ export default function Registation() {
               className="form"
               type="number"
               name="phone"
-              placeholder="79198765422"
+              placeholder="ТЕЛЕФОН"
             />
           </li>
           <li>

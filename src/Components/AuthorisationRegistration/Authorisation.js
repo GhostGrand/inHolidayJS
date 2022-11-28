@@ -23,7 +23,10 @@ export default function Authorisation() {
             placeholder="ПАРОЛЬ"
           />
         </li>
-        <button className="button">Авторизоваться</button>
+        <li>
+          <button className="button">Войти</button>
+          <button className="button">Зарегистрироваться</button>
+        </li>
       </ul>
     </div>
   </div>;
