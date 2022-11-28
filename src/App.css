@@ -39,7 +39,7 @@ body {
   line-height: 1;
   font-size: 16px;
   color: black;
-  /* font-family: Inter; */
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
@@ -106,6 +106,8 @@ body {
   padding: 10px;
   margin-left: 10px;
   border: 1px solid grey;
+  /* text-transform: uppercase; */
+  text-align: center;
 }
 
 .button {
@@ -114,6 +116,12 @@ body {
   background: #0f2d39;
   color: white;
   width: 10%;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #1b4e62;
+  transition: ease-in-out 0.2s;
 }
 
 /* ------------------------------------------------------------------------------- */
@@ -122,6 +130,7 @@ body {
   /* padding: 10px; */
   padding: 10px 100px 100px 10px;
   border: 1px solid grey;
+  
 }
 
 .registration {
@@ -157,3 +166,13 @@ body {
 }
 
 /* ------------------------------------------------------------------------------- */
+
+.header li {
+  display: inline; /* Отображать как строчный элемент */
+  margin-right: 5px;
+}
+
+.header_reg {
+  /* text-transform: uppercase; */
+  margin-bottom: 10px;
+}
