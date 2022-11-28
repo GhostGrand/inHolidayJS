@@ -10,7 +10,7 @@ export default function Authorisation() {
                 className="form"
                 type="email"
                 name="mail"
-                placeholder="Email"
+                placeholder="EMAIL"
           />
 
           
@@ -20,7 +20,7 @@ export default function Authorisation() {
             className="form"
             type="password"
             name="password"
-            placeholder="Пароль"
+            placeholder="ПАРОЛЬ"
           />
         </li>
         <button className="button">Авторизоваться</button>

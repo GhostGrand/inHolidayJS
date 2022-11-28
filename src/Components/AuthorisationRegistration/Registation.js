@@ -4,7 +4,7 @@ export default function Registation() {
   return (
     <div className="registration">
       <div className="registration">
-        <p>Регистрация</p>
+        <p className="header_reg">Регистрация</p>
         <ul>
           <li>
             <input className="form" type="text" name="name" placeholder="ФИО" />
@@ -12,13 +12,13 @@ export default function Registation() {
               className="form"
               type="email"
               name="mail"
-              placeholder="Email"
+              placeholder="EMAIL"
             />
             <input
               className="form"
               type="password"
               name="password"
-              placeholder="Пароль"
+              placeholder="ПАРОЛЬ"
             />
           </li>
 
@@ -27,7 +27,7 @@ export default function Registation() {
               className="form"
               type="number"
               name="phone"
-              placeholder="79197..."
+              placeholder="79198765422"
             />
           </li>
           <li>
