@@ -293,3 +293,37 @@ body {
   height: 40px;
   
 }
+
+.footerbar {
+  background-color: #232727;
+  margin-top: 40px;
+}
+.footer-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.footerbar-menu {
+  /* width: 30%; */
+  padding-top: 60px;
+  margin-bottom: 60px;
+  
+}
+.footerbar-menu a {
+  color: #CDCDCD;
+}
+
+.footerbar-menu li {
+  display: block;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  width: 80%;
+}
+.footer-li {
+  font-size: 14px;
+  
+
+  /* background: #000; */
+  
+}
