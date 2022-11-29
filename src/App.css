@@ -125,6 +125,7 @@ body {
   background: #1b4e62;
   transition: ease-in-out 0.2s;
 }
+
 /* ------------------------------------------------------------------------------- */
 .contacts_form {
   margin-top: 10px;
@@ -140,6 +141,33 @@ body {
   /* justify-content: center; */
   /* flex: auto; */
 }
+
+/* ------------------------------------------------------------------------------- */
+
+.HelpHead {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 66.8439px;
+  margin-bottom: 7px;
+}
+
+.HelpBody {
+  margin-bottom: 29px;
+}
+
+.Help {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  position: absolute;
+  left: 160px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 927px;
+
+}
+
+/* ------------------------------------------------------------------------------- */
 
 .header li {
   display: inline; /* Отображать как строчный элемент */
