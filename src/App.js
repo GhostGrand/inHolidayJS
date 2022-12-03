@@ -12,10 +12,11 @@ import TemplateOrderForm from "./Components/TemplateOrderForm/TemplateOrderForm"
 function App() {
   return (
     <div className="App">
-      {/* <AboutUs></AboutUs> */}
       <Header></Header>
-      <Registation></Registation>
-      <Authorisation></Authorisation>
+      {/* <Registation></Registation>
+      <Authorisation></Authorisation> */}
+      {/* <AboutUs></AboutUs> */}
+      <TemplateOrderForm></TemplateOrderForm>
       <Footer></Footer>
     </div>
   );

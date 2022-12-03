@@ -160,10 +160,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
-  position: absolute;
-  left: 160px;
-  top: 50%;
-  transform: translateY(-50%);
+  margin: 160px;
   max-width: 927px;
 
 }
@@ -331,7 +328,6 @@ body {
 /* ----------------------форма заказа-------------------------------- */
 
 .orderForm {
-  position: absolute;
   padding-left: 160px;
   padding-top: 133px;
   width: 100%;
@@ -353,7 +349,6 @@ body {
 }
 
 .Rectangle {
-  position: absolute;
   width: auto;
   background: #FFFFFF;
   box-shadow: 0px 0px 44px 14.6667px rgba(0, 0, 0, 0.25);
@@ -361,6 +356,8 @@ body {
   padding-left: 60px;
   margin-top: 40px;
   padding-bottom: 78px;
+  margin-right: 160px;
+  padding-top: 40px;
 }
 
 .orderFormH2 {
@@ -390,9 +387,9 @@ body {
 
 #frmDate {
   font-style: normal;
-font-weight: 500;
-font-size: 22px;
-line-height: 27px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
 }
 
 .img {
@@ -406,10 +403,9 @@ line-height: 27px;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
-  position: absolute;
   display: block;
-  right: 60px;
-  margin-top: 30px;
+  margin: 20px;
   min-width: min-content;
+  float: right;
 }
 
