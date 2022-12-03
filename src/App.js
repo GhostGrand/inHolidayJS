@@ -6,14 +6,17 @@ import Authorisation from "./Components/AuthorisationRegistration/Authorisation"
 import Header from "./Components/Header/Header";
 import Help from "./Components/Help";
 import AboutUs from "./Components/AboutUs/AboutUs";
+import TemplateOrderForm from "./Components/TemplateOrderForm/TemplateOrderForm";
+
 
 function App() {
   return (
     <div className="App">
-      <AboutUs></AboutUs>
+      {/* <AboutUs></AboutUs> */}
       {/* <Header></Header> */}
       {/* <Registation></Registation> */}
       {/* <Authorisation></Authorisation> */}
+      <TemplateOrderForm></TemplateOrderForm>
     </div>
   );
 }
