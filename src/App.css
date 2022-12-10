@@ -503,3 +503,60 @@ body {
   position:absolute;
   bottom:0;
 }
+
+/* ----------------------Личный кабинет: информация о заказе-------------------------------- */
+
+.LinkInvitation {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  /* identical to box height */
+
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  
+  color: #000982;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#LinkInvitationText {
+  display: inline-block;
+}
+
+.list {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 33px;
+  text-transform: capitalize;
+  overflow: auto;
+  height: 300px;
+  margin-right: 40%;
+}
+
+.list li {
+  display: list-item;
+  list-style: inside decimal;
+}
+
+.list::-webkit-scrollbar {
+  width: 27px;
+
+}
+
+.list::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 16px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #383838, #383838), #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 16px;
+}
