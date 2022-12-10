@@ -1,13 +1,13 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Registation from "./Components/AuthorisationRegistration/Registation";
 import Authorisation from "./Components/AuthorisationRegistration/Authorisation";
 import Header from "./Components/Header/Header";
-import Help from "./Components/Help";
+import Help from "./Components/Help/Help";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Footer from "./Components/Footer/Footer";
 import TemplateOrderForm from "./Components/TemplateOrderForm/TemplateOrderForm";
-import PersonalAccount from "./Components/PersonalAccount/PersonalAccount";
 import InfoOrder from "./Components/InfoOrder/InfoOrder";
 
 function App() {

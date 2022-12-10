@@ -8,7 +8,7 @@ export default function Footer() {
                 <ul className='footerbar-menu'>
                     <li><a href="#" className="navbar-brand">inholiday</a></li>
                     <li><a className='footer-li' href="">Все права принадлежат четырем студентам ПрИн-367 и ВолгГТУ</a></li>
-                    <li><a className='footer-li' href="">+79610686211</a></li>
+                    <li><a className='footer-li' href="">+79655586211</a></li>
                     <li><a className='footer-li' href=""></a></li>
                 </ul>
 

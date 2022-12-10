@@ -1,47 +1,56 @@
 import React from "react";
 import "../../App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import Main from "../Main/Main";
+import Help from "../Help/Help";
+import Templates from "../Templates/Templates";
+import AboutUs from "../AboutUs/AboutUs";
+import Authorisation from "../AuthorisationRegistration/Authorisation";
+import Registation from "../AuthorisationRegistration/Registation";
 
 export default function Header() {
-  return <header>
-    {/* <div className="header__container _container">
-      <a href=""><b>inholiday</b></a>
-      <nav className="header__menu menu">
-        <ul className="menu__list">
-          <li className="menu__item">
-            <a href="">как все работает</a>
-          </li>
-          <li className="menu__item">
-            <a href="">помощь</a>
-          </li>
-          <li className="menu__item">
-            <a href="">шаблоны</a>
-          </li>
-          <li className="menu__item">
-            <a href="">о нас</a>
-          </li>
-          <li>
-          <button className="menu__button">Зарегистрироваться</button>
-          </li>
-        </ul>
-        
-      </nav>
-    </div> */}
-    <nav className="navbar">
-      <div className="container">
-        <a href="#" className="navbar-brand">inholiday</a>
-        <div className="navbar-wrap">
-          <ul className="navbar-menu">
-            <li><a href="#">Как все работает</a></li>
-            <li><a href="#">Помощь</a></li>
-            <li><a href="#">Шаблоны</a></li>
-            <li><a href="#">О нас</a></li>
-            
-          </ul>
-          <a className="authreg">Логин|Регистрация</a>
+  return <header>   
+    <Router>
+      <nav className="navbar">
+        <div className="container">
+          <Link to="/" className="navbar-brand">inholiday</Link>
+          <div className="navbar-wrap">
+            <ul className="navbar-menu">
+              {/*<li><Link to="/info">Как все работает</Link></li>*/}
+              <li><Link to="/help">Помощь</Link></li>
+              <li><Link to="/templates">Шаблоны</Link></li>
+              <li><Link to="/about">О нас</Link></li>
+
+            </ul>
+            <Link to= "/auth" className="authreg">Логин|</Link>
+            <Link to= "/reg" className="authreg">Регистрация</Link>
+          </div>
+          
         </div>
-        
-      </div>
-    </nav>
-    
+      </nav>
+      
+      <Routes>
+        <Route path="/" element={<Main/>}/>
+
+        <Route path="/help" element={<Help/>}/>
+
+        <Route path="/templates" element={<Templates/>}/>
+
+        <Route path="/about" element={<AboutUs/>}/>
+
+        <Route path="/auth" element={<Authorisation/>}/>
+
+        <Route path="/reg" element={<Registation/>}/>
+
+      </Routes>
+
+
+    </Router>
+
   </header>;
 }
