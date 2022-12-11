@@ -19,7 +19,7 @@ function App() {
       {/* <AboutUs></AboutUs> */}
       {/* <TemplateOrderForm></TemplateOrderForm> */}
       {/* <PersonalAccount></PersonalAccount> */}
-      <InfoOrder></InfoOrder>
+      {/* <InfoOrder></InfoOrder> */}
       <Footer></Footer>
     </div>
   );

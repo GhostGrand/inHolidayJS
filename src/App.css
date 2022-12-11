@@ -564,3 +564,130 @@ body {
   border: 1px solid #000000;
   border-radius: 16px;
 }
+
+
+
+
+/* -------------------- Главная страница -------------------- */
+.main-wrap {
+  margin-top: 60px;
+}
+.title {
+  text-transform: uppercase;
+  font-size: 66px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.sales_image {
+  /* display: flex; */
+  /* width:50%;
+  display:inline-block; */
+}
+
+
+.main-cols {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.maincols-item {
+  width: 300px;
+  /* display: inline-block; */
+}
+
+.sales_text {
+  font-size: 66px;
+  margin-top: 40px;
+  padding-top: 30px;
+}
+
+.fact_element {
+  margin-bottom: 30px;
+  /* padding-bottom: 20px; */
+}
+
+.main-rows {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 30px;
+  /* padding-left: 20px; */
+  /* align-items: center; */
+  /* align-content: space-between; */
+}
+
+.main-rows-item {
+  width: 100%;
+  /* padding-right: 20px; */
+  
+}
+
+
+.main-why_us {
+  font-weight: 800;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #00181D;
+  /* width: 100%; */
+
+}
+
+.man-title-text {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #232727;
+}
+
+.man-sub-text {
+  width: 220px;
+  margin-top: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.mockup_image {
+  padding-top: 20px;
+  /* display: flex; */
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-all-works {
+  padding-top: 20px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  color: #00181D;
+}
+.main-second-rows {
+  padding-top: 40px;
+  width: 100%;
+}
+.main-second-rows-component {
+  /* padding-top: 20px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* text-align: center; */
+  justify-content: center;
+  padding-right: 30px;
+  /* margin-right: 90px; */
+  /* width: 100%; */
+}
+.main-line {
+  width: 54px;
+  height: 0px;
+  border: 3px solid #00181D;
+  transform: rotate(90deg);
+}
