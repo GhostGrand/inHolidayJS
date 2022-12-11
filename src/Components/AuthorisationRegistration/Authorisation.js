@@ -7,13 +7,11 @@ export default function Authorisation() {
       <ul>
         <li>
           <input
-                className="form"
-                type="email"
-                name="mail"
-                placeholder="EMAIL"
+            className="form"
+            type="email"
+            name="mail"
+            placeholder="EMAIL"
           />
-
-          
         </li>
         <li>
           <input

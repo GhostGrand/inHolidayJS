@@ -15,7 +15,6 @@ import Registation from "../AuthorisationRegistration/Registation";
 
 export default function Header() {
   return <header>   
-    <Router>
       <nav className="navbar">
         <div className="container">
           <Link to="/" className="navbar-brand">inholiday</Link>
@@ -25,32 +24,11 @@ export default function Header() {
               <li><Link to="/help">Помощь</Link></li>
               <li><Link to="/templates">Шаблоны</Link></li>
               <li><Link to="/about">О нас</Link></li>
-
             </ul>
             <Link to= "/auth" className="authreg">Логин|</Link>
             <Link to= "/reg" className="authreg">Регистрация</Link>
           </div>
-          
         </div>
       </nav>
-      
-      <Routes>
-        <Route path="/" element={<Main/>}/>
-
-        <Route path="/help" element={<Help/>}/>
-
-        <Route path="/templates" element={<Templates/>}/>
-
-        <Route path="/about" element={<AboutUs/>}/>
-
-        <Route path="/auth" element={<Authorisation/>}/>
-
-        <Route path="/reg" element={<Registation/>}/>
-
-      </Routes>
-
-
-    </Router>
-
   </header>;
 }
