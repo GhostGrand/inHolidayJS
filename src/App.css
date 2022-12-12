@@ -433,6 +433,7 @@ body {
 .MyOrders {
   display:inline-block;
   max-width: 50%;
+  min-height: 700px;
 }
 
 .MyOrdersHead {
@@ -484,6 +485,7 @@ body {
   height: 600px;
   position: absolute;
   padding-bottom:50px;
+  float: right;
 }
 
 .fio {

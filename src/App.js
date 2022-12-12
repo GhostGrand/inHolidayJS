@@ -9,6 +9,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import Footer from "./Components/Footer/Footer";
 import TemplateOrderForm from "./Components/TemplateOrderForm/TemplateOrderForm";
 import InfoOrder from "./Components/InfoOrder/InfoOrder";
+import PersonalAccount from "./Components/PersonalAccount/PersonalAccount"
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <Authorisation></Authorisation> */}
       {/* <AboutUs></AboutUs> */}
       {/* <TemplateOrderForm></TemplateOrderForm> */}
-      {/* <PersonalAccount></PersonalAccount> */}
+      <PersonalAccount></PersonalAccount>
       {/* <InfoOrder></InfoOrder> */}
       <Footer></Footer>
     </div>
