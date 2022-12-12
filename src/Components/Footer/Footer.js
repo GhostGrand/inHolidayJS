@@ -1,9 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import Main from "../Main/Main";
-import PersonalAccount from "../PersonalAccount/PersonalAccount";
-import Templates from "../Templates/Templates";
-import AboutUs from "../AboutUs/AboutUs";
+import { HashLink } from 'react-router-hash-link';
 
 export default function Footer() {
     return (          
@@ -18,14 +15,14 @@ export default function Footer() {
                 </ul>
                 <ul className='footerbar-menu'>
                     <li><a href="#" className="navbar-brand">Продукт</a></li>
-                    <li><Link to="/account" className='footer-li' href="">Личный кабинет</Link></li>
-                    <li><Link to="/templates" className='footer-li' href="">Шаблоны</Link></li>
+                    <li><Link to="/account" className='footer-li'>Личный кабинет</Link></li>
+                    <li><Link to="/templates" className='footer-li'>Шаблоны</Link></li>
                     <li><a className='footer-li' href="">Индивидуальное приглашение</a></li>
                 </ul>
                 <ul className='footerbar-menu'>
                     <li><a href="#" className="navbar-brand">Проект</a></li>
-                    <li><a className='footer-li' href="">Как все работает</a></li>
-                    <li><Link to="/about"className='footer-li' href="">О нас</Link></li>
+                    <li><Link to="/#how" hash="#how" className='footer-li'>Как все работает</Link></li>
+                    <li><Link to="/about"className='footer-li'>О нас</Link></li>
                     <li><a className='footer-li' href="">Главный баннер</a></li>
                 </ul>                  
             </div>

@@ -4,36 +4,51 @@ import "../../App.css";
 let url = 'http://45.15.159.0/api/auth/register';
 
 export default function Registation() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [otherCommunication, setOtherCommunication] = useState("");
+  const [formValue, setFormValue] = useState({ name:"", email:"", password:"", phoneNumber:null, otherCommunication:null })
 
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   function onSubmit(event) {
-    fetch(url, {method:'POST',
-        name: name,
-        email: email, 
-        password: password,
-        phoneNumber: phoneNumber,
-        otherCommunication: otherCommunication
-       })
-    .then(response => {
+    event.preventDefault();
+    console.log(formValue);
+    fetch(url, {
+      method:"POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ 
+        name : formValue.name,
+        email: formValue.email,
+        password: formValue.password,
+        phoneNumber: formValue.phoneNumber,
+        otherCommunication: formValue.therCommunication
+      })
+    })
+    .then(response => response.json())
+    .then(response => console.log(JSON.stringify(response)))
+
+    /*.then(response => {
       if(response.status == 200) {
         response.json()
       }
       else {
         response.json()
       }
-    })
+    })*/
     /*.then(
       (result) => {
         if(response.status)
       }
     )*/;
+  }
+
+  function handleInput(event) {
+    const {name, value} = event.target;
+    setFormValue({...formValue, [name]:value});
+    
+    console.log(event.target.value);
   }
 
   return (
@@ -48,24 +63,24 @@ export default function Registation() {
               type="text" 
               name="name" 
               placeholder="ФИО" 
-              value={name.value} // мб valueOf
-              onChange={setName}
+              value={formValue.name.value}
+              onChange={handleInput}
             />
             <input
               className="form"
               type="email"
-              name="mail"
+              name="email"
               placeholder="EMAIL"
-              value={email.value}
-              onChange={setEmail}
+              value={formValue.email.value}
+              onChange={handleInput}
             />
             <input
               className="form"
               type="password"
               name="password"
               placeholder="ПАРОЛЬ"
-              value={password.value}
-              onChange={setPassword}
+              value={formValue.password.value}
+              onChange={handleInput}
             />
           </li>
 
@@ -75,8 +90,8 @@ export default function Registation() {
               type="number"
               name="phone"
               placeholder="ТЕЛЕФОН"
-              value={phoneNumber.value}
-              onChange={setPhoneNumber}
+              value={formValue.phoneNumber == null ? "" : formValue.phoneNumber.value}
+              onChange={handleInput}
             />
           </li>
           <li>
@@ -85,16 +100,16 @@ export default function Registation() {
               type="text"
               name="text"
               placeholder="Иные контакты"
-              value={otherCommunication.value}
-              onChange={setOtherCommunication}
+              value={formValue.otherCommunication == null ? "" : formValue.otherCommunication.value}
+              onChange={handleInput}
             />
           </li>
           <button className="button" type="submit">Зарегистрироваться</button>
         </ul>
         </form>
-        <div visibility={false}>
-          {/*Ошибка {error.message}*/}
-        </div>
+        {/*<div visibility={false}>
+          Ошибка {error.message}
+        </div>*/}
 
 
       </div>
