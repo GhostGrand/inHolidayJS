@@ -20,6 +20,7 @@ import Templates from "./Components/Templates/Templates";
 
 function App() {
   return (
+<<<<<<< HEAD
     <Router>
       <div className="App">
         <Header></Header>
@@ -42,6 +43,18 @@ function App() {
         <Footer></Footer>
       </div>
     </Router>
+=======
+    <div className="App">
+      <Header></Header>
+      {/* <Registation></Registation>
+      <Authorisation></Authorisation> */}
+      {/* <AboutUs></AboutUs> */}
+      {/* <TemplateOrderForm></TemplateOrderForm> */}
+      {/* <PersonalAccount></PersonalAccount> */}
+      {/* <InfoOrder></InfoOrder> */}
+      <Footer></Footer>
+    </div>
+>>>>>>> 23751624891f979cfcef8e1f0787b2c0530525de
   );
 }
 
