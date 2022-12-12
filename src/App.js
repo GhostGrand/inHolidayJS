@@ -32,6 +32,7 @@ function App() {
           <Route path="/help" element={<Help/>}/>
           <Route path="/auth" element={<Authorisation/>}/>
           <Route path="/reg" element={<Registation/>}/>
+          <Route path="/order/:id" element={<TemplateOrderForm/>}/>
         </Routes>
         {/* <Registation></Registation>
         <Authorisation></Authorisation> */}

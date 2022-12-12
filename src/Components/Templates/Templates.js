@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../../App.css";
 
 let url = 'http://45.15.159.0/api/template';
@@ -6,6 +7,7 @@ let url = 'http://45.15.159.0/api/template';
 export default function Templates() {
 
     const [items, setItems] = useState([]);
+    
 
     const [error, setError] = useState(null);
     const [isError, setIsError] = useState(false);
@@ -28,6 +30,7 @@ export default function Templates() {
         }
         apiGet();
     }, []);
+
 
     return(
     <div className="container">
@@ -56,11 +59,11 @@ export default function Templates() {
                 
                 <ul>
                     {items.map(item => (
-                        <li key={item.id}>
+                        <Link  key={item.id} to={'/order/{id}'.replace('{id}', item.id)}>
                             <div className="order">
                                 <p className="orderName">#{item.id}<br/>{item.name}</p>
                             </div>
-                        </li>
+                        </Link>
                     ))}
                 </ul>
             </div>
