@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../App.css";
+import PersonalAccount from "../PersonalAccount/PersonalAccount";
 
 let url = 'http://45.15.159.0/api/auth/register';
 
@@ -7,8 +9,9 @@ export default function Registation() {
   const [formValue, setFormValue] = useState({ name:"", email:"", password:"", phoneNumber:null, otherCommunication:null })
 
   const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
+  
+  const navigate = useNavigate();
 
   function onSubmit(event) {
     event.preventDefault();
@@ -30,7 +33,7 @@ export default function Registation() {
     .then(response => {
       if(response.status == 400) {
         setIsError(true)
-        setError("Неверно введён номер телефона")
+        setError("Некорректные данные")
       }
       else if(response.status == 401) {
         setIsError(true)
@@ -48,6 +51,10 @@ export default function Registation() {
         setIsError(true)
         setError("Что-то не так с серваком (500)")
       }
+      else {
+        setIsError(false)
+        navigate('/account')
+      }
     })
     .then(response => console.log(JSON.stringify(response)))
   }
@@ -55,7 +62,6 @@ export default function Registation() {
   function handleInput(event) {
     const {name, value} = event.target;
     setFormValue({...formValue, [name]:value});
-    
     console.log(event.target.value);
   }
 
