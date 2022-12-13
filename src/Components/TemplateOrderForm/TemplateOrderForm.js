@@ -15,7 +15,7 @@ export default function TemplateOrderForm() {
 
   const{id} = useParams();
 
-  const [item, setItem] = useState();
+  const [items, setItems] = useState([]);
 
     useEffect(() => {
         function apiGet() {
@@ -29,8 +29,8 @@ export default function TemplateOrderForm() {
             .then((response) => response.json())
             .then((json) => {
                 console.log(json)
-                setItem(json)
-                console.log(item)
+                setItems(json)
+                console.log(items)
             })
         }
         apiGet();
