@@ -33,6 +33,7 @@ function App() {
           <Route path="/auth" element={<Authorisation/>}/>
           <Route path="/reg" element={<Registation/>}/>
           <Route path="/order/:id" element={<TemplateOrderForm/>}/>
+          <Route path="/infoOrder/:id" element={<InfoOrder/>}/>
         </Routes>
         {/* <Registation></Registation>
         <Authorisation></Authorisation> */}
