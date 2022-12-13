@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-let url = 'http://45.15.159.0/api/auth/register';
+let url = 'http://45.15.159.0/api/auth/login';
 
 export default function Authorisation() {
   const [formValue, setFormValue] = useState({email:"", password:""})

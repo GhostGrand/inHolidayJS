@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../../App.css";
 import Rectangle from "./Rectangle 367.png"
 
-let url1 = 'http://45.15.159.0/api/template'; // заменить на http://45.15.159.0/api/invitation
+let url1 = 'http://45.15.159.0/api/invitation';
 let url2 = 'http://45.15.159.0/api/account';
 
 export default function PersonalAccount() {
@@ -61,17 +61,15 @@ export default function PersonalAccount() {
             ))}
         </div>
       
-        {items2.map(item => (
-          <div  key={item.id} className="Profile">    
-            <img src = {Rectangle}/>
-            <p className="fio">{item.name}</p>
-            <p className="number">{item.phoneNumber}</p>
-            <p className="mail">{item.email}</p>
-            <p>Иные контакты:</p>
-            <p>{item.otherCommunication}</p>
-            {/*<button id="btn1" className="button">Редактировать</button>*/}
-          </div>
-        ))}
+        <div  key={items2.id} className="Profile">    
+          <img src = {Rectangle}/>
+          <p className="fio">{items2.name}</p>
+          <p className="number">{items2.phoneNumber}</p>
+          <p className="mail">{items2.email}</p>
+          <p>Иные контакты:</p>
+          <p>{items2.otherCommunication}</p>
+          {/*<button id="btn1" className="button">Редактировать</button>*/}
+        </div>
       </div>
   );
 }
