@@ -433,7 +433,7 @@ body {
 
 .MyOrders {
   display:inline-block;
-  max-width: 50%;
+  width: 50%;
   min-height: 700px;
 }
 
@@ -448,7 +448,8 @@ body {
 }
 
 .order {
-  width: 191.61px;
+  min-width: 191.61px;
+  width: min-content;
   height: 220px;
   background: #FFFFFF;
   box-shadow: 0px 0px 17.0323px 5.67742px rgba(0, 0, 0, 0.25);
@@ -468,6 +469,8 @@ body {
 .orderName {
   
   transform: translateY(-50%);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .Profile {
