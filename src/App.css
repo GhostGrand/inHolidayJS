@@ -433,7 +433,7 @@ body {
 
 .MyOrders {
   display:inline-block;
-  width: 50%;
+  width: 53%;
   min-height: 700px;
 }
 
@@ -487,6 +487,7 @@ body {
   margin-top: 53px;
   text-align: left;
   height: 600px;
+  width: 30%;
   position: absolute;
   padding-bottom:50px;
   float: right;
