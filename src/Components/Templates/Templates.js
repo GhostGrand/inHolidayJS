@@ -1,6 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../../App.css";
+
+let url = 'http://45.15.159.0/api/template';
+
 export default function Templates() {
+
+    const [items, setItems] = useState([]);
+    
+
+    const [error, setError] = useState(null);
+    const [isError, setIsError] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+        function apiGet() {
+            fetch(url, {
+                method: "GET",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => response.json())
+            .then((json) => {
+                console.log(json)
+                setItems(json)
+            })
+        }
+        apiGet();
+    }, []);
+
+
     return(
     <div className="container">
         <div>
@@ -25,31 +56,16 @@ export default function Templates() {
                         <p className="checkbox-sub-text">Праздники</p>
                     </div>
                 </div>
-                <div className="order">
-                    <p className="orderName">#1<br/>свадьба</p>
-                </div>
-
-                <div className="order">
-                    <p className="orderName">#1<br/>свадьба</p>
-                </div>
-                <div className="order">
-                    <p className="orderName">#1<br/>днюха</p>
-                </div>
-                <div className="order">
-                    <p className="orderName">#1<br/>корпоратив</p>
-                </div>
-                <div className="order">
-                    <p className="orderName">#2<br/>праздники</p>
-                </div>
-                <div className="order">
-                    <p className="orderName">#2<br/>свадьба</p>
-                </div>
-                <div className="order">
-                    <p className="orderName">#3<br/>свадьба</p>
-                </div>
-                <div className="order">
-                    <p className="orderName">#4<br/>свадьба</p>
-                </div>
+                
+                <ul>
+                    {items.map(item => (
+                        <Link  key={item.id} to={'/order/{id}'.replace('{id}', item.id)}>
+                            <div className="order">
+                                <p className="orderName">#{item.id}<br/>{item.name}</p>
+                            </div>
+                        </Link>
+                    ))}
+                </ul>
             </div>
         </div>
 
