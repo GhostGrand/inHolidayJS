@@ -23,6 +23,7 @@ export default function InfoOrder() {
           .then((json) => {
               console.log(json)
               setItems(json)
+              setGuests(json.guests)
           })}
         apiGet();
     }, []);
