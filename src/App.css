@@ -754,3 +754,15 @@ input[type=checkbox]
   font-size: 110%;
   display: inline;
 }
+
+/* -------------------------------- */
+.error_div {
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* color: white; */
+  background: rgb(255, 80, 80);
+}

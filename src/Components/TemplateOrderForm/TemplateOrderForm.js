@@ -105,9 +105,13 @@ export default function TemplateOrderForm() {
             <p className="orderFormH3">Выбрать дату окончания работы приглашения:</p>
             <input id="frmDate" className="form" type="date" name="finishDate" value={formValue.finishDate.value} onChange={handleInput}/>
             <img className="img" src={Rectangle}/>
-            <div style={{visibility: isError ? 'visible' : 'hidden' }}>
-            Ошибка: {error}.
+            <div className="container">
+            <div className="main-wrap">
+              <div className="error_div" style={{visibility: isError ? 'visible' : 'hidden' }}>
+                Ошибка: {error}.
+              </div>
             </div>
+          </div>
             <button id="btn" className="button" type="submit">Заказать</button>
           </form>
         </div>

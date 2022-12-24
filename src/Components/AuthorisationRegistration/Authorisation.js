@@ -76,9 +76,13 @@ export default function Authorisation() {
             />
           </li>
           <li>
-            <div style={{visibility: isError ? 'visible' : 'hidden' }}>
-              Ошибка: {error}.
+          <div className="container">
+            <div className="main-wrap">
+              <div className="error_div" style={{visibility: isError ? 'visible' : 'hidden' }}>
+                Ошибка: {error}.
+              </div>
             </div>
+          </div>
             <button className="button">Войти</button>
           </li>
         </ul>
