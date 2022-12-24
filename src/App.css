@@ -714,7 +714,8 @@ body {
   display: flex;
   flex-direction:column;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 40px;
+  /* margin-right: 40px; */
 }
 
 .checkbox-row {
