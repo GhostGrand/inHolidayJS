@@ -27,7 +27,7 @@ export default function Registation() {
         email: formValue.email,
         password: formValue.password,
         phoneNumber: formValue.phoneNumber == "" ? null : formValue.phoneNumber,
-        otherCommunication: formValue.therCommunication == "" ? null : formValue.therCommunication
+        otherCommunication: formValue.otherCommunication == "" ? null : formValue.otherCommunication
       })
     })
     .then(response => {
