@@ -6,78 +6,47 @@ export default function InfoOrder() {
 
   const{id} = useParams();
 
-  const [item, setItem] = useState();
+  const [items, setItems] = useState({});
+  const [guests, setGuests] = useState([]);
 
     useEffect(() => {
-        function apiGet() {
-            fetch('http://45.15.159.0/api/invitation/' + id, {
-                method: "GET",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then((response) => response.json())
-            .then((json) => {
-                console.log(json)
-                setItem(json)
-            })
-        }
+      console.log("АЙДИ:" + id)
+      function apiGet() {
+        fetch('http://45.15.159.0/api/invitation/' + id, {
+            method: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'            
+              }
+          })
+          .then((response) => response.json())
+          .then((json) => {
+              console.log(json)
+              setItems(json)
+          })}
         apiGet();
     }, []);
 
   return (
     <div>
-      <div key={item.id} className = "personalAccount">
+      <div key={items.id} className = "personalAccount">
         <p className="PAHead">личный кабинет</p>
-        <p className="orderFormH1">приглашение #{item.id} {item.name}</p>
+        <p className="orderFormH1">приглашение #{items.id} {items.name}</p>
         <div className="Rectangle">
-            <p className="orderFormH1">Статус: {item.orderStatus}</p>
-            <p className="orderFormH1" id="LinkInvitationText">ссылка на приглашение: </p>
-            <a className="LinkInvitation">{item.link}</a>
-            <p className="orderFormH1">Список откликнувшихся гостей</p>
+          <p className="orderFormH1">Статус: {items.orderStatus}</p>
+          <p className="orderFormH1" id="LinkInvitationText">ссылка на приглашение: </p>
+          <a className="LinkInvitation">{items.link}</a>
+          <p className="orderFormH1">Список откликнувшихся гостей:</p>
+
+          <div>
             <ol className="list">
-              {item.guests.map(item => (
-                <li key={item.id}>{item.name}</li>
+              {guests.map(item => (
+                <li>
+                  {item.name}
+                </li>
               ))}
-              {/*
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Зурбадулина зульфия раджешовна</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Зурбадулина зульфия раджешовна</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Зурбадулина зульфия раджешовна</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              <li>Артемов Артем артемович</li>
-              <li>Невский Лев Викторович</li>
-              */}
             </ol>
+          </div> 
         </div>
       </div>
     </div>

@@ -16,24 +16,23 @@ export default function PersonalAccount() {
 
     useEffect(() => {
       function apiGet1() {
-          fetch(url1, {
-              method: "GET",
-              headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json'
-              }
-          })
-          .then(response => {
-            if(response.status == 401) {
-              navigate('/auth')
-            }
-          else {
-            return response.json()
-          }})
-          .then((json) => {
-              console.log(json)
-              setItems1(json)
-          })
+        fetch(url1, {
+          method: "GET",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'              
+        }})
+        .then(response => {
+          if(response.status == 401) {
+            navigate('/auth')
+          }
+        else {
+          return response.json()
+        }})
+        .then((json) => {
+            console.log(json)
+            setItems1(json)
+        })
       }
       apiGet1();
 
@@ -42,8 +41,8 @@ export default function PersonalAccount() {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json'            
+              }
         })
         .then(response => {
           if(response.status == 401) {

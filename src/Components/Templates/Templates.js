@@ -26,9 +26,12 @@ export default function Templates() {
             .then((json) => {
                 console.log(json)
                 setItems(json)
+                console.log(items)
             })
+            
         }
         apiGet();
+        console.log(items)
     }, []);
 
 

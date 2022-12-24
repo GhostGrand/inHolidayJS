@@ -18,6 +18,7 @@ export default function TemplateOrderForm() {
   const [items, setItems] = useState([]);
 
     useEffect(() => {
+      console.log("АЙДИ:" + id)
         function apiGet() {
             fetch('http://45.15.159.0/api/template/' + id, {
                 method: "GET",
