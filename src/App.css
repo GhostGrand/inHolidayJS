@@ -147,6 +147,14 @@ body {
   /* flex: auto; */
 }
 
+.margin-bottom-logreg {
+  margin-bottom: 150px;
+}
+
+.margin-bottom-logreg2 {
+  margin-bottom: 270px;
+}
+
 /* ------------------------------------------------------------------------------- */
 
 .HelpHead {
@@ -164,7 +172,8 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
-  margin: 160px;
+  margin-top: 210px;
+  margin-bottom: 260px;
   max-width: 927px;
 
 }
@@ -448,9 +457,8 @@ body {
 }
 
 .order {
-  width: 200px;
-  word-wrap:break-word;
-  /* overflow-x:hidden; */
+  min-width: 191.61px;
+  width: min-content;
   height: 220px;
   background: #FFFFFF;
   box-shadow: 0px 0px 17.0323px 5.67742px rgba(0, 0, 0, 0.25);
@@ -465,7 +473,6 @@ body {
   text-align: center;
   padding-top: 110px;
   display: inline-block;
-  vertical-align: middle;
 }
 
 .orderName {
@@ -473,7 +480,6 @@ body {
   transform: translateY(-50%);
   margin-left: 10px;
   margin-right: 10px;
-  
 }
 
 .Profile {
@@ -484,7 +490,7 @@ body {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 23px;
+  font-size: 21.2903px;
   line-height: 26px;
   margin-right: 165px;
   margin-top: 53px;
@@ -551,13 +557,11 @@ body {
   overflow: auto;
   height: 300px;
   margin-right: 40%;
-  margin-top: 40px;
 }
 
 .list li {
   display: list-item;
   list-style: inside decimal;
-  margin-bottom: 20px;
 }
 
 .list::-webkit-scrollbar {
@@ -720,7 +724,7 @@ body {
   flex-direction:column;
   align-items: center;
   padding-left: 40px;
-  /* margin-right: 40px; */
+
 }
 
 .checkbox-row {

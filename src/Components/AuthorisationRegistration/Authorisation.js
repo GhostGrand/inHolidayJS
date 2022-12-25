@@ -93,7 +93,9 @@ export default function Authorisation() {
               </div>
             </div>
           </div>
+          <div className="margin-bottom-logreg2">
             <button className="button">Войти</button>
+          </div>
           </li>
         </ul>
       </div>

@@ -138,7 +138,9 @@ export default function Registation() {
               </div>
             </div>
           </div>
-          <button className="button" type="submit">Зарегистрироваться</button>
+          <div className="margin-bottom-logreg">
+            <button className="button" type="submit">Зарегистрироваться</button>
+          </div>
         </form>
       </div>
     </div>
