@@ -32,17 +32,20 @@ export default function Authorisation() {
       if(response.status == 400) {
         setIsError(true)
         setError("Неверный логин/пароль или пользователь с такими учетными данными не существует")
-        localStorage.setItem('isAuth', true)
+        localStorage.setItem('isAuth', false)
+        console.log("localStorage" + localStorage.getItem('isAuth'))
       }
       else if(response.status == 500) {
         setIsError(true)
         setError("Что-то не так с серваком (500)")
-        localStorage.setItem('isAuth', true)
+        localStorage.setItem('isAuth', false)
+        console.log("localStorage" + localStorage.getItem('isAuth'))
       }
       else {
         setIsError(false)
         //setIsAuth(true)
-        localStorage.setItem('isAuth', false)
+        localStorage.setItem('isAuth', true)
+        console.log("localStorage" + localStorage.getItem('isAuth'))
         navigate('/account')
       }
     })

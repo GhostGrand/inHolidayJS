@@ -32,17 +32,20 @@ export default function Header() {
       })
       .then(response => {
         if(response.status == 200) {
-          localStorage.setItem('isAuth', true)
+          localStorage.setItem('isAuth', false)
+          console.log("localStorage" + localStorage.getItem('isAuth'))
           navigate('/main')
         }})
       .then(response => console.log(JSON.stringify(response)))
       
   }
 
+  
+
   return <header>   
       <nav className="navbar">
         <div className="container">
-          <Link to="/" className="navbar-brand">inholiday</Link>
+          <Link to="/" className="navbar-brand" onClick={() => (console.log("localStorage" + localStorage.getItem('isAuth')))}>inholiday</Link>
           <div className="navbar-wrap">
             <ul className="navbar-menu">
               {/*<li><Link to="/info">Как все работает</Link></li>*/}
@@ -50,9 +53,9 @@ export default function Header() {
               <li><Link to="/templates">Шаблоны</Link></li>
               <li><Link to="/about">О нас</Link></li>
             </ul>
-            <Link to= "/auth" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'visible' : 'hidden' }}>Логин</Link>
-            <Link to= "/reg" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'visible' : 'hidden' }}>Регистрация</Link>
-            <Link to= "" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'hidden' : 'visible' }} onClick={apiGet}>Выход</Link>
+            <Link to= "/auth" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'hidden' : 'visible' }}>Логин</Link>
+            <Link to= "/reg" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'hidden' : 'visible' }}>Регистрация</Link>
+            <Link to= "" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'visible' : 'hidden' }} onClick={apiGet}>Выход</Link>
           </div>
         </div>
       </nav>
