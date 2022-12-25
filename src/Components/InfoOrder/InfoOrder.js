@@ -37,8 +37,7 @@ export default function InfoOrder() {
         <p className="orderFormH1">приглашение "{items.name}"</p>
         <div className="Rectangle">
           <div>
-            <p className="orderFormH1">Исходный шаблон: </p>
-            <Link to={'/order/{id}'.replace('{id}', template.id)} className="orderFormH1">{template.name}</Link>
+            <p className="orderFormH1">Исходный шаблон: <Link to={'/order/{id}'.replace('{id}', template.id)} className="orderFormH1">{template.name}</Link></p>
           </div>
           <p className="orderFormH1">Статус: {items.orderStatus}</p>
           <p className="orderFormH1" id="LinkInvitationText">ссылка на приглашение: <a href={items.link}>{items.link}</a></p>

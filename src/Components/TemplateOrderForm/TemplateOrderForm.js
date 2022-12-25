@@ -64,8 +64,8 @@ export default function TemplateOrderForm() {
         setError("Некорректные данные")
       }
       else if(response.status == 401) {
-        setIsError(true)
-        setError("Что-то не так с серваком (401)")
+        setIsError(false)
+        navigate('/auth')
       }
       else if(response.status == 500) {
         setIsError(true)
