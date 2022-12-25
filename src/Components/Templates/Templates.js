@@ -97,7 +97,7 @@ export default function Templates() {
                     {currentItems.map(item => (
                         <Link  key={item.id} to={'/order/{id}'.replace('{id}', item.id)}>
                             <div className="order">
-                                <p className="orderName">#{item.id}<br/>{item.name}</p>
+                                <p className="orderName">{item.name}</p>
                                 <p className="orderName">{item.price}</p>
                             </div>
                         </Link>

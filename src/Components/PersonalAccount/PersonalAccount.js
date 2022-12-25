@@ -41,7 +41,7 @@ export default function PersonalAccount() {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'            
+                'Content-Type': 'application/json'
               }
         })
         .then(response => {
