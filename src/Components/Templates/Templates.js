@@ -93,10 +93,11 @@ export default function Templates() {
                     </div>
                 </div>
                 
-                <ul>
+                <ul>                  
                     {currentItems.map(item => (
                         <Link  key={item.id} to={'/order/{id}'.replace('{id}', item.id)}>
                             <div className="order">
+                                <img className="order" src={item.previewPath}></img>
                                 <p className="orderName">{item.name}</p>
                                 <p className="orderName">{item.price}</p>
                             </div>

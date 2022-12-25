@@ -7,7 +7,6 @@ import {
   useParams,
   useNavigate
 } from "react-router-dom";
-import Rectangle from "./Rectangle 370.jpg"
 
 let url1 = 'http://45.15.159.0/api/template';
 
@@ -31,12 +30,10 @@ export default function TemplateOrderForm() {
             .then((json) => {
                 console.log(json)
                 setItems(json)
-                console.log(items)
             })
         }
         apiGet();
     }, []);
-
 
   const [formValue, setFormValue] = useState({ name:"", startDate:"", finishDate:"", idTemplate:id})
 
@@ -100,7 +97,7 @@ export default function TemplateOrderForm() {
             <input id="frmDate" className="form" type="date" name="startDate" value={formValue.startDate.value} onChange={handleInput}/>
             <p className="orderFormH3">Выбрать дату окончания работы приглашения:</p>
             <input id="frmDate" className="form" type="date" name="finishDate" value={formValue.finishDate.value} onChange={handleInput}/>
-            <img className="img" src={Rectangle}/>
+            <img className="img" src={items.previewPath}></img>
             <p className = "orderFormH1">цена: {items.price} руб.</p>
             <div className="container" style={{visibility: isError ? 'visible' : 'hidden' }}>
               <div className="main-wrap">
