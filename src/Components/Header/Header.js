@@ -25,7 +25,7 @@ export default function Header() {
               <li><Link to="/templates">Шаблоны</Link></li>
               <li><Link to="/about">О нас</Link></li>
             </ul>
-            <Link to= "/auth" className="authreg">Логин|</Link>
+            <Link to= "/auth" className="authreg">Логин</Link>
             <Link to= "/reg" className="authreg">Регистрация</Link>
           </div>
         </div>

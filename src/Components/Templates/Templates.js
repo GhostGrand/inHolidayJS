@@ -89,7 +89,7 @@ export default function Templates() {
                     </div>
                     <div className="checkbox_element">
                         <input type="checkbox" name="" id="" checked={checkedState[3]} onChange={() => handleOnChange(3)}/>
-                        <p className="checkbox-sub-text">Праздники</p>
+                        <p className="checkbox-sub-text">Другое</p>
                     </div>
                 </div>
                 
