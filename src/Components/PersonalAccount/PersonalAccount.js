@@ -70,7 +70,7 @@ export default function PersonalAccount() {
             {items1.map(item => (
               <Link  key={item.id} to={'/infoOrder/{id}'.replace('{id}', item.id)}>
                   <div className="order">
-                      <p className="orderName">#{item.id}<br/>{item.name}</p>
+                      <p className="orderName">{item.name}</p>
                   </div>
               </Link>
             ))}
