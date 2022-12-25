@@ -248,7 +248,16 @@ body {
 .navbar-brand {
   font-weight: 800;
   font-size: 22px;
-  color: black;
+  /* color: black; */
+  color: #CDCDCD;
+  text-transform: uppercase;
+}
+
+.main-brand {
+  font-weight: 800;
+  font-size: 22px;
+  /* color: black; */
+  color: #000000;
   text-transform: uppercase;
 }
 
