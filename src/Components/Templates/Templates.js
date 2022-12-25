@@ -26,9 +26,12 @@ export default function Templates() {
             .then((json) => {
                 console.log(json)
                 setItems(json)
+                console.log(items)
             })
+            
         }
         apiGet();
+        console.log(items)
     }, []);
 
 
@@ -53,7 +56,7 @@ export default function Templates() {
                     </div>
                     <div className="checkbox_element">
                         <input type="checkbox" name="" id="" />
-                        <p className="checkbox-sub-text">Праздники</p>
+                        <p className="checkbox-sub-text">Другое</p>
                     </div>
                 </div>
                 

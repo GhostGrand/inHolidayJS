@@ -324,7 +324,7 @@ body {
 }
 .footer-li {
   font-size: 14px;
-  
+  color: #CDCDCD;
 
   /* background: #000; */
   
@@ -716,7 +716,8 @@ body {
   display: flex;
   flex-direction:column;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 40px;
+  /* margin-right: 40px; */
 }
 
 .checkbox-row {
@@ -755,4 +756,16 @@ input[type=checkbox]
   /* Checkbox text */
   font-size: 110%;
   display: inline;
+}
+
+/* -------------------------------- */
+.error_div {
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* color: white; */
+  background: rgb(255, 80, 80);
 }

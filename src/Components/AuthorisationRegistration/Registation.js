@@ -27,7 +27,7 @@ export default function Registation() {
         email: formValue.email,
         password: formValue.password,
         phoneNumber: formValue.phoneNumber == "" ? null : formValue.phoneNumber,
-        otherCommunication: formValue.therCommunication == "" ? null : formValue.therCommunication
+        otherCommunication: formValue.otherCommunication == "" ? null : formValue.otherCommunication
       })
     })
     .then(response => {
@@ -120,8 +120,12 @@ export default function Registation() {
             </li>
           </ul>
 
-          <div style={{visibility: isError ? 'visible' : 'hidden' }}>
-            Ошибка: {error}.
+          <div className="container">
+            <div className="main-wrap">
+              <div className="error_div" style={{visibility: isError ? 'visible' : 'hidden' }}>
+                Ошибка: {error}.
+              </div>
+            </div>
           </div>
           <button className="button" type="submit">Зарегистрироваться</button>
         </form>

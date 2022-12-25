@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../../App.css";
 import Rectangle from "./Rectangle 367.png"
 
@@ -11,36 +12,49 @@ export default function PersonalAccount() {
   const [items1, setItems1] = useState([]);
   const [items2, setItems2] = useState([]);
 
-    useEffect(() => {
-        function apiGet1() {
-            fetch(url1, {
-                method: "GET",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then((response) => response.json())
-            .then((json) => {
-                console.log(json)
-                setItems1(json)
-            })
-        }
-        apiGet1();
+  const navigate = useNavigate();
 
-        function apiGet2() {
-          fetch(url2, {
-              method: "GET",
-              headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json'
+    useEffect(() => {
+      function apiGet1() {
+        fetch(url1, {
+          method: "GET",
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'              
+        }})
+        .then(response => {
+          if(response.status == 401) {
+            navigate('/auth')
+          }
+        else {
+          return response.json()
+        }})
+        .then((json) => {
+            console.log(json)
+            setItems1(json)
+        })
+      }
+      apiGet1();
+
+      function apiGet2() {
+        fetch(url2, {
+            method: "GET",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'            
               }
-          })
-          .then((response) => response.json())
-          .then((json) => {
-              console.log(json)
-              setItems2(json)
-          })
+        })
+        .then(response => {
+          if(response.status == 401) {
+            navigate('/auth')
+          }
+        else {
+          return response.json()
+        }})
+        .then((json) => {
+            console.log(json)
+            setItems2(json)
+        })
       }
       apiGet2();
     }, []);

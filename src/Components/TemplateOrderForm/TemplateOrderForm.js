@@ -18,6 +18,7 @@ export default function TemplateOrderForm() {
   const [items, setItems] = useState([]);
 
     useEffect(() => {
+      console.log("АЙДИ:" + id)
         function apiGet() {
             fetch('http://45.15.159.0/api/template/' + id, {
                 method: "GET",
@@ -104,9 +105,13 @@ export default function TemplateOrderForm() {
             <p className="orderFormH3">Выбрать дату окончания работы приглашения:</p>
             <input id="frmDate" className="form" type="date" name="finishDate" value={formValue.finishDate.value} onChange={handleInput}/>
             <img className="img" src={Rectangle}/>
-            <div style={{visibility: isError ? 'visible' : 'hidden' }}>
-            Ошибка: {error}.
+            <div className="container">
+            <div className="main-wrap">
+              <div className="error_div" style={{visibility: isError ? 'visible' : 'hidden' }}>
+                Ошибка: {error}.
+              </div>
             </div>
+          </div>
             <button id="btn" className="button" type="submit">Заказать</button>
           </form>
         </div>
