@@ -21,7 +21,7 @@ export default function Header() {
 
     setIsAuth(localStorage.getItem('isAuth'))
     console.log("header useEffect " + isAuth)
-  },  []);
+  });
 
   function apiGet() {
       fetch(url, {
