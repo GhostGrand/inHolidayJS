@@ -6,12 +6,6 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Main from "../Main/Main";
-import Help from "../Help/Help";
-import Templates from "../Templates/Templates";
-import AboutUs from "../AboutUs/AboutUs";
-import Authorisation from "../AuthorisationRegistration/Authorisation";
-import Registation from "../AuthorisationRegistration/Registation";
 
 export default function Header() {
   return <header>   

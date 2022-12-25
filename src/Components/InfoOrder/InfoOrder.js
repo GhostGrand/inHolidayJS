@@ -16,7 +16,7 @@ export default function InfoOrder() {
             method: "GET",
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'            
+                'Content-Type': 'application/json'
               }
           })
           .then((response) => response.json())
@@ -32,10 +32,10 @@ export default function InfoOrder() {
     <div>
       <div key={items.id} className = "personalAccount">
         <p className="PAHead">личный кабинет</p>
-        <p className="orderFormH1">приглашение #{items.id} {items.name}</p>
+        <p className="orderFormH1">приглашение "{items.name}"</p>
         <div className="Rectangle">
           <p className="orderFormH1">Статус: {items.orderStatus}</p>
-          <p className="orderFormH1" id="LinkInvitationText">ссылка на приглашение: </p>
+          <p className="orderFormH1" id="LinkInvitationText">ссылка на приглашение: <a href={items.link}>{items.link}</a></p>
           <a className="LinkInvitation">{items.link}</a>
           <p className="orderFormH1">Список откликнувшихся гостей:</p>
 
