@@ -99,7 +99,7 @@ export default function TemplateOrderForm() {
             <input id="frmDate" className="form" type="date" name="finishDate" value={formValue.finishDate.value} onChange={handleInput}/>
             <img className="img" src={items.previewPath}></img>
             <p className = "orderFormH1">цена: {items.price} руб.</p>
-            <div className="container" style={{visibility: isError ? 'visible' : 'hidden' }}>
+            <div className="container" style={{display: isError ? 'block' : 'none' }}>
               <div className="main-wrap">
                 <div className="error_div">
                   Ошибка: {error}.

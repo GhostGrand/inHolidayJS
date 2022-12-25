@@ -130,9 +130,9 @@ export default function Registation() {
             </li>
           </ul>
 
-          <div className="container">
+          <div className="container" style={{display: isError ? 'block' : 'none' }}>
             <div className="main-wrap">
-              <div className="error_div" style={{visibility: isError ? 'visible' : 'hidden' }}>
+              <div className="error_div">
                 Ошибка: {error}.
               </div>
             </div>

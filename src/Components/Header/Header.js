@@ -51,9 +51,9 @@ export default function Header() {
               <li><Link to="/templates">Шаблоны</Link></li>
               <li><Link to="/about">О нас</Link></li>
             </ul>
-            <Link to= "/auth" className="authreg" style={{visibility: isAuth ? 'hidden' : 'visible' }}>Логин</Link>
-            <Link to= "/reg" className="authreg" style={{visibility: isAuth ? 'hidden' : 'visible' }}>Регистрация</Link>
-            <Link className="authreg" style={{visibility: isAuth ? 'visible' : 'hidden' }} onClick={apiGet}>Выход</Link>
+            <Link to= "/auth" className="authreg" style={{display: isAuth ? 'none' : 'block' }}>Логин</Link>
+            <Link to= "/reg" className="authreg" style={{display: isAuth ? 'none' : 'block' }}>Регистрация</Link>
+            <Link className="authreg" style={{display: isAuth ? 'block' : 'none' }} onClick={apiGet}>Выход</Link>
           </div>
         </div>
       </nav>

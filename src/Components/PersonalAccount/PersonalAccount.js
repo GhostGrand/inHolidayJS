@@ -133,7 +133,7 @@ export default function PersonalAccount() {
       
         <div  key={items2.id} className="Profile">    
           <form onSubmit={onSubmit}>
-            <p className="fio" style={{visibility: isEditing ? 'hidden' : 'visible' }}>{items2.name}</p>
+            <p className="fio" style={{display: isEditing ? 'none' : 'block' }}>{items2.name}</p>
             <input
               className="form"
               type="text"
@@ -141,10 +141,10 @@ export default function PersonalAccount() {
               placeholder="ФИО"
               value={formValue.name}
               onChange={handleInput}
-              style={{visibility: isEditing ? 'visible' : 'hidden' }}
+              style={{display: isEditing ? 'block' : 'none' }}
             >
             </input>
-            <p className="number" style={{visibility: isEditing ? 'hidden' : 'visible' }}>{items2.phoneNumber}</p>
+            <p className="number" style={{display: isEditing ? 'none' : 'block' }}>{items2.phoneNumber}</p>
             <input
               className="form"
               type="number"
@@ -152,12 +152,12 @@ export default function PersonalAccount() {
               placeholder="ТЕЛЕФОН"
               value={formValue.phoneNumber}
               onChange={handleInput}
-              style={{visibility: isEditing ? 'visible' : 'hidden' }}
+              style={{display: isEditing ? 'block' : 'none' }}
             >
             </input>
-            <p className="mail" style={{visibility: isEditing ? 'hidden' : 'visible' }}>{items2.email}</p>
+            <p className="mail" style={{display: isEditing ? 'none' : 'block' }}>{items2.email}</p>
             <p>Иные контакты:</p>
-            <p style={{visibility: isEditing ? 'hidden' : 'visible' }}>{items2.otherCommunication}</p>
+            <p style={{display: isEditing ? 'none' : 'block' }}>{items2.otherCommunication}</p>
             <input
               className="form"
               type="text"
@@ -165,21 +165,21 @@ export default function PersonalAccount() {
               placeholder=""
               value={formValue.otherCommunication}
               onChange={handleInput}
-              style={{visibility: isEditing ? 'visible' : 'hidden' }}
+              style={{display: isEditing ? 'block' : 'none' }}
             >
             </input>
           
             <div className="container">
               <div className="main-wrap">
-                <div className="error_div" style={{visibility: isError ? 'visible' : 'hidden' }}>
+                <div className="error_div" style={{display: isError ? 'block' : 'none' }}>
                   Ошибка: {error}.
                 </div>
               </div>
             </div>
             
-            <button id="btn1" className="button" style={{visibility: isEditing ? 'visible' : 'hidden' }} type="submit" onClick={handleButtonEdit}>Сохранить</button>
+            <button id="btn1" className="button" style={{display: isEditing ? 'block' : 'none' }} type="submit" onClick={handleButtonEdit}>Сохранить</button>
           </form>
-          <button id="btn1" className="button" style={{visibility: isEditing ? 'hidden' : 'visible' }} onClick={handleButtonEdit}>Редактировать</button>
+          <button id="btn1" className="button" style={{display: isEditing ? 'none' : 'block' }} onClick={handleButtonEdit}>Редактировать</button>
         </div>
       </div>
     
