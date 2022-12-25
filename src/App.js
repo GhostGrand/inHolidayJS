@@ -19,8 +19,13 @@ import PersonalAccount from "./Components/PersonalAccount/PersonalAccount";
 import Templates from "./Components/Templates/Templates";
 
 function App() {
+
+  
+
   return (
+    
     <Router>
+      {localStorage.setItem('isAuth', false)}
       <div className="App">
         <Header></Header>
         <Routes>

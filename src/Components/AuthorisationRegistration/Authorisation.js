@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import isAuth, { setIsAuth } from '../Header/Header'
 
 let url = 'http://45.15.159.0/api/auth/login';
 
@@ -9,6 +10,7 @@ export default function Authorisation() {
   const [error, setError] = useState(null);
   const [isError, setIsError] = useState(false);
 
+  
   const navigate = useNavigate();
 
   function onSubmit(event) {
@@ -18,7 +20,8 @@ export default function Authorisation() {
       method:"POST",
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        //'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdEB0ZXN0LmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVU0VSIiwibmJmIjoxNjcxODIwOTE0LCJleHAiOjE3MDMzNTY5MTQsImlzcyI6ImluSG9saWRheVNlcnZlciIsImF1ZCI6ImluSG9saWRheUNsaWVudCJ9.WPuU54w3IeA0LZQq6Z35SYsz7lCzEQXXJplU6BrWe4E'
       },
       body: JSON.stringify({ 
         email: formValue.email,
@@ -29,13 +32,17 @@ export default function Authorisation() {
       if(response.status == 400) {
         setIsError(true)
         setError("Неверный логин/пароль или пользователь с такими учетными данными не существует")
+        localStorage.setItem('isAuth', true)
       }
       else if(response.status == 500) {
         setIsError(true)
         setError("Что-то не так с серваком (500)")
+        localStorage.setItem('isAuth', true)
       }
       else {
         setIsError(false)
+        //setIsAuth(true)
+        localStorage.setItem('isAuth', false)
         navigate('/account')
       }
     })
