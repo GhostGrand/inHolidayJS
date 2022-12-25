@@ -5,11 +5,8 @@ import {
   useNavigate,
   Link
 } from "react-router-dom";
-//import isAuth from '../GlobalVariables/GlobalVariables'
 
 let url = 'http://45.15.159.0/api/auth/logout';
-/*const [isAuth, setIsAuth] = useState(false)
-export {isAuth, setIsAuth}*/
 
 export default function Header() {
 
@@ -17,9 +14,12 @@ export default function Header() {
 
   const [items, setItems] = useState([]);
 
-  /*useEffect(() => {
-    localStorage.setItem('isAuth', false)
-  }, []);*/
+  const [isAuth, setIsAuth] = useState(false);
+
+  useEffect(() => {
+    setIsAuth(localStorage.getItem('isAuth'))
+    console.log("header useEffect " + isAuth)
+  });
 
   function apiGet() {
       fetch(url, {
@@ -34,13 +34,10 @@ export default function Header() {
         if(response.status == 200) {
           localStorage.setItem('isAuth', false)
           console.log("localStorage" + localStorage.getItem('isAuth'))
-          navigate('/main')
+          navigate('/')
         }})
       .then(response => console.log(JSON.stringify(response)))
-      
   }
-
-  
 
   return <header>   
       <nav className="navbar">
@@ -53,9 +50,9 @@ export default function Header() {
               <li><Link to="/templates">Шаблоны</Link></li>
               <li><Link to="/about">О нас</Link></li>
             </ul>
-            <Link to= "/auth" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'hidden' : 'visible' }}>Логин</Link>
-            <Link to= "/reg" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'hidden' : 'visible' }}>Регистрация</Link>
-            <Link to= "" className="authreg" style={{visibility: localStorage.getItem('isAuth') ? 'visible' : 'hidden' }} onClick={apiGet}>Выход</Link>
+            <Link to= "/auth" className="authreg" style={{visibility: isAuth ? 'hidden' : 'visible' }}>Логин</Link>
+            <Link to= "/reg" className="authreg" style={{visibility: isAuth ? 'hidden' : 'visible' }}>Регистрация</Link>
+            <Link to= "" className="authreg" style={{visibility: isAuth ? 'visible' : 'hidden' }} onClick={apiGet}>Выход</Link>
           </div>
         </div>
       </nav>
