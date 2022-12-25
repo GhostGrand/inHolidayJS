@@ -90,12 +90,8 @@ export default function TemplateOrderForm() {
 
   return (
       <div className = "orderForm">
-        <p className = "orderFormHead">заказ шаблона</p>
-        
-        {item => (
-          <p key={item.id} className = "orderFormH1">шаблон #{item.id} {item.name}</p>
-        )}
-        
+        <p className = "orderFormHead">заказ шаблона</p>        
+        <p key={items.id} className = "orderFormH1">"{items.name}"</p>
         <div className = "Rectangle">
           <form onSubmit={onSubmit}>
             <p className = "orderFormH1">введите название:</p>
