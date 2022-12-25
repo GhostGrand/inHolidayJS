@@ -481,7 +481,7 @@ body {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 21.2903px;
+  font-size: 23px;
   line-height: 26px;
   margin-right: 165px;
   margin-top: 53px;
@@ -548,11 +548,13 @@ body {
   overflow: auto;
   height: 300px;
   margin-right: 40%;
+  margin-top: 40px;
 }
 
 .list li {
   display: list-item;
   list-style: inside decimal;
+  margin-bottom: 20px;
 }
 
 .list::-webkit-scrollbar {
