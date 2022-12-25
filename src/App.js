@@ -28,6 +28,7 @@ function App() {
       {localStorage.setItem('isAuth', false)}
       <div className="App">
         <Header></Header>
+        
         <Routes>
                 
           <Route path="/" element={<Main/>}/>

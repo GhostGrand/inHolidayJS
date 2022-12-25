@@ -42,7 +42,7 @@ export default function Header() {
   return <header>   
       <nav className="navbar">
         <div className="container">
-          <Link to="/" className="navbar-brand" onClick={() => (console.log("localStorage" + localStorage.getItem('isAuth')))}>inholiday</Link>
+          <Link to="/" className="main-brand" onClick={() => (console.log("localStorage" + localStorage.getItem('isAuth')))}>inholiday</Link>
           <div className="navbar-wrap">
             <ul className="navbar-menu">
               {/*<li><Link to="/info">Как все работает</Link></li>*/}
