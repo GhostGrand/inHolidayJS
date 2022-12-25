@@ -16,6 +16,11 @@ export default function Header() {
 
   const [isAuth, setIsAuth] = useState(false);
 
+  function isAuthFunc() {
+    console.log("В функции " + isAuth)
+    return isAuth
+  }
+
   useEffect(() => {
     setIsAuth(localStorage.getItem('isAuth'))
     console.log("header useEffect " + isAuth)
@@ -50,9 +55,9 @@ export default function Header() {
               <li><Link to="/templates">Шаблоны</Link></li>
               <li><Link to="/about">О нас</Link></li>
             </ul>
-            <Link to= "/auth" className="authreg" style={{visibility: isAuth ? 'hidden' : 'visible' }}>Логин</Link>
-            <Link to= "/reg" className="authreg" style={{visibility: isAuth ? 'hidden' : 'visible' }}>Регистрация</Link>
-            <Link to= "" className="authreg" style={{visibility: isAuth ? 'visible' : 'hidden' }} onClick={apiGet}>Выход</Link>
+            <Link to= "/auth" className="authreg" style={{visibility: isAuth.value ? 'hidden' : 'visible' }}>Логин</Link>
+            <Link to= "/reg" className="authreg" style={{visibility: isAuth.value ? 'hidden' : 'visible' }}>Регистрация</Link>
+            <Link to= "" className="authreg" style={{visibility: isAuth.value ? 'visible' : 'hidden' }} onClick={apiGet}>Выход</Link>
           </div>
         </div>
       </nav>
