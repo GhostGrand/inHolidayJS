@@ -9,6 +9,8 @@ let url2 = 'http://45.15.159.0/api/account';
 
 export default function PersonalAccount() {
 
+  const [motivator, setMotivator] = useState(0);
+
   const [items1, setItems1] = useState([]);
   const [items2, setItems2] = useState([]);
 
@@ -58,7 +60,9 @@ export default function PersonalAccount() {
       })
     }
     apiGet2();
-  }, []);
+
+    setMotivator(0);
+  }, [motivator]);
 
   const [isEditing, setIsEditing] = useState(false);
 
@@ -102,6 +106,7 @@ export default function PersonalAccount() {
       }
       else {
         setIsError(false)
+        setMotivator(1);
       }
     })
     .then(response => console.log(JSON.stringify(response)))
