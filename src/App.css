@@ -122,6 +122,19 @@ body {
   border: 1px solid grey;
   /* text-transform: uppercase; */
   text-align: center;
+  
+}
+
+.form_person {
+  margin-top: 10px;
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid grey;
+  /* text-transform: uppercase; */
+  /* text-align: center; */
+  resize: none; 
+  width: 38em;
+  height: 28em;
 }
 
 .button {
@@ -145,6 +158,9 @@ body {
   /* padding: 10px; */
   padding: 10px 100px 100px 10px;
   border: 1px solid grey;
+  resize: none;
+  width: 300px;
+  /* height: 300px; */
   
 }
 

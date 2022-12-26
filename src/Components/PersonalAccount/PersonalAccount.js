@@ -164,10 +164,11 @@ export default function PersonalAccount() {
             <p>Иные контакты:</p>
             <p style={{display: isEditing ? 'none' : 'block' }}>{items2.otherCommunication}</p>
             <textarea
-              className="form"
+              className="form_person"
               type="text"
               name="otherCommunication"
               placeholder=""
+              maxlength="300"
               value={formValue.otherCommunication}
               onChange={handleInput}
               style={{display: isEditing ? 'block' : 'none' }}

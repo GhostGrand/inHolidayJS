@@ -124,6 +124,7 @@ export default function Registation() {
                 type="text"
                 name="otherCommunication"
                 placeholder="Иные контакты"
+                maxlength="300"
                 value={formValue.otherCommunication}
                 onChange={handleInput}
               />
