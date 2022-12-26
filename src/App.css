@@ -591,6 +591,10 @@ body {
   margin-bottom: 20px;
 }
 
+#paddingL {
+  padding-left: 60px;
+}
+
 .list::-webkit-scrollbar {
   width: 27px;
 
