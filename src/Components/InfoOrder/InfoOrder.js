@@ -31,11 +31,11 @@ export default function InfoOrder() {
     }, []);
 
   return (
-    <div>
-      <div key={items.id} className = "personalAccount">
+    <div className="container">
+      <div key={items.id} className="infoOrderMargin">
         <p className="PAHead">личный кабинет</p>
         <p className="orderFormH1">приглашение "{items.name}"</p>
-        <div className="Rectangle">
+        <div className="Rectangle container">
           <div>
             <p className="orderFormH1">Исходный шаблон: <Link to={'/order/{id}'.replace('{id}', template.id)} className="orderFormH1">{template.name}</Link></p>
           </div>
