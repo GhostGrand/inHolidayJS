@@ -86,21 +86,28 @@ export default function TemplateOrderForm() {
   }
 
   return (
+    <div className="container">
       <div className = "orderForm">
         <p className = "orderFormHead">заказ шаблона</p>        
         <p key={items.id} className = "orderFormH1">"{items.name}"</p>
         <div className = "Rectangle">
           <form onSubmit={onSubmit}>
-            <p className = "orderFormH1">введите название:</p>
+            <div className="RectangleForm">
+              <p className = "orderFormH1">введите название:</p>
             <input id = "frm" className="form" type="text" name="name" placeholder="Название" value={formValue.name.value} onChange={handleInput}/>
             <p className = "orderFormH2">Выбрать дату начала работы приглашения:</p>
             <input id="frmDate" className="form" type="date" name="startDate" value={formValue.startDate.value} onChange={handleInput}/>
             <p className="orderFormH3">Выбрать дату окончания работы приглашения:</p>
             <input id="frmDate" className="form" type="date" name="finishDate" value={formValue.finishDate.value} onChange={handleInput}/>
-            <img className="img" src={items.previewPath}></img>
+            <div className="imageOrderForm">
+              <img className="container" src={items.previewPath}></img>
+            </div>
+            
             <p className = "orderFormH1">цена: {items.price} руб.</p>
+            </div>
+            
             <div className="container" style={{display: isError ? 'block' : 'none' }}>
-              <div className="main-wrap">
+              <div className="">
                 <div className="error_div">
                   Ошибка: {error}.
                 </div>
@@ -108,7 +115,10 @@ export default function TemplateOrderForm() {
             </div>
             <button id="btn" className="button" type="submit">Заказать</button>
           </form>
+          
         </div>
       </div>
+    </div>
+      
   );
 }
