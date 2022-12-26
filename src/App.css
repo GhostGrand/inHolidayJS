@@ -566,11 +566,13 @@ body {
   overflow: auto;
   height: 300px;
   margin-right: 40%;
+  margin-top: 40px;
 }
 
 .list li {
   display: list-item;
   list-style: inside decimal;
+  margin-bottom: 20px;
 }
 
 .list::-webkit-scrollbar {
