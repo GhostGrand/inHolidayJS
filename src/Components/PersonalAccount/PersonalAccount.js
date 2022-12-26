@@ -163,7 +163,7 @@ export default function PersonalAccount() {
             <p className="mail" style={{display: isEditing ? 'none' : 'block' }}>{items2.email}</p>
             <p>Иные контакты:</p>
             <p style={{display: isEditing ? 'none' : 'block' }}>{items2.otherCommunication}</p>
-            <input
+            <textarea
               className="form"
               type="text"
               name="otherCommunication"
@@ -172,7 +172,7 @@ export default function PersonalAccount() {
               onChange={handleInput}
               style={{display: isEditing ? 'block' : 'none' }}
             >
-            </input>
+            </textarea>
           
             <div className="container">
               <div className="main-wrap">
