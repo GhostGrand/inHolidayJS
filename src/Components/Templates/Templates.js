@@ -67,7 +67,7 @@ export default function Templates() {
         setCurrentItems(array)
     };
 
-    const whiteBack = `rgba(255, 255, 255, 0.5)`;
+    const whiteBack = `rgba(255, 255, 255, 0.75)`;
 
 
     return(

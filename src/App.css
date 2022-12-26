@@ -505,6 +505,8 @@ body {
   transform: translateY(-50%);
   margin-left: 10px;
   margin-right: 10px;
+  color: #000000;
+  font-weight: 500;
 }
 
 .Profile {
