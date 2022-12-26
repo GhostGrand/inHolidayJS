@@ -27,7 +27,6 @@ function App() {
   return (
     
     <Router>
-      {localStorage.setItem('isAuth', false)}
       <div className="App">
         <Header></Header>
         
