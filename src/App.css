@@ -462,7 +462,7 @@ body {
 }
 
 .infoOrderMargin {
-  margin-top: 20px;
+  margin-top: 90px;
 }
 
 .PAHead {
@@ -791,6 +791,11 @@ line-height: 38px;
 /* identical to box height */
 
 text-transform: uppercase;
+}
+
+.marginLeftOrder {
+  padding-left: 40px;
+  margin-right: -40px;
 }
 
 input[type=checkbox]
