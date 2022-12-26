@@ -119,7 +119,7 @@ export default function Registation() {
               />
             </li>
             <li>
-              <input
+              <textarea
                 className="contacts_form"
                 type="text"
                 name="otherCommunication"
