@@ -63,6 +63,14 @@ body {
     padding-right: 16px;
   
 }
+.container_for_img {
+  max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 90%;
+}
 /* ------------------------------------------------------------------------------- */
 
 .App {
@@ -449,7 +457,11 @@ body {
 /* ----------------------Личный кабинет-------------------------------- */
 
 .personalAccount {
-  margin-left: 167px;
+  /* margin-left: 167px; */
+  margin-top: 90px;
+}
+
+.infoOrderMargin {
   margin-top: 90px;
 }
 

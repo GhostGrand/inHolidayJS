@@ -17,7 +17,7 @@ export default function Footer() {
                     <li className="navbar-brand">Продукт</li>
                     <li><Link to="/account" className='footer-li'>Личный кабинет</Link></li>
                     <li><Link to="/templates" className='footer-li'>Шаблоны</Link></li>
-                    <li><Link className='footer-li' href="" to={'/order/{id}'.replace('{id}', 6)}>Своё приглашение</Link></li>
+                    <li><Link className='footer-li' href="" to={'/order/{id}'.replace('{id}', 10)}>Своё приглашение</Link></li>
                 </ul>
                 <ul className='footerbar-menu'>
                     <li className="navbar-brand">Проект</li>
