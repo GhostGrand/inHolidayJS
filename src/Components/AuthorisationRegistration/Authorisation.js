@@ -20,8 +20,7 @@ export default function Authorisation() {
       method:"POST",
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        //'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdEB0ZXN0LmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVU0VSIiwibmJmIjoxNjcxODIwOTE0LCJleHAiOjE3MDMzNTY5MTQsImlzcyI6ImluSG9saWRheVNlcnZlciIsImF1ZCI6ImluSG9saWRheUNsaWVudCJ9.WPuU54w3IeA0LZQq6Z35SYsz7lCzEQXXJplU6BrWe4E'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({ 
         email: formValue.email,
@@ -32,19 +31,18 @@ export default function Authorisation() {
       if(response.status == 400) {
         setIsError(true)
         setError("Неверный логин/пароль или пользователь с такими учетными данными не существует")
-        localStorage.setItem('isAuth', false)
+        localStorage.setItem('isAuth', "false")
         console.log("localStorage" + localStorage.getItem('isAuth'))
       }
       else if(response.status == 500) {
         setIsError(true)
         setError("Что-то не так с серваком (500)")
-        localStorage.setItem('isAuth', false)
+        localStorage.setItem('isAuth', "false")
         console.log("localStorage" + localStorage.getItem('isAuth'))
       }
       else {
         setIsError(false)
-        //setIsAuth(true)
-        localStorage.setItem('isAuth', true)
+        localStorage.setItem('isAuth', "true")
         console.log("localStorage" + localStorage.getItem('isAuth'))
         navigate('/account')
       }
@@ -86,9 +84,9 @@ export default function Authorisation() {
             />
           </li>
           <li>
-          <div className="container">
+          <div className="container" style={{display: isError ? 'block' : 'none' }}>
             <div className="main-wrap">
-              <div className="error_div" style={{visibility: isError ? 'visible' : 'hidden' }}>
+              <div className="error_div">
                 Ошибка: {error}.
               </div>
             </div>

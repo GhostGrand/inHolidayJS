@@ -18,6 +18,8 @@ import Main from "./Components/Main/Main";
 import PersonalAccount from "./Components/PersonalAccount/PersonalAccount";
 import Templates from "./Components/Templates/Templates";
 
+import Invitation from "./Invitation(chern)/Invitation";
+
 function App() {
 
   
@@ -48,6 +50,7 @@ function App() {
         {/* <PersonalAccount></PersonalAccount> */}
         {/* <InfoOrder></InfoOrder> */}
         <Footer></Footer>
+        {/*<Invitation></Invitation>*/}
       </div>
     </Router>
   );
