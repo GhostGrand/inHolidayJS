@@ -15,9 +15,9 @@ export default function Header() {
   const [isAuth, setIsAuth] = useState("");
 
   useEffect(() => {
-    if(localStorage.getItem('isAuth') == "false") {
+    /*if(localStorage.getItem('isAuth') == "false") {
       localStorage.setItem('isAuth', "")
-    }
+    }*/
 
     setIsAuth(localStorage.getItem('isAuth'))
     console.log("header useEffect " + isAuth)
@@ -33,7 +33,7 @@ export default function Header() {
       })
       .then(response => {
         if(response.status == 200) {
-          localStorage.setItem('isAuth', "")
+          localStorage.setItem('isAuth', "false")
           console.log("localStorage" + localStorage.getItem('isAuth'))
           navigate('/')
         }})
@@ -51,9 +51,9 @@ export default function Header() {
               <li><Link to="/templates">Шаблоны</Link></li>
               <li><Link to="/about">О нас</Link></li>
             </ul>
-            <Link to= "/auth" className="authreg" style={{display: isAuth ? 'none' : 'block' }}>Логин</Link>
-            <Link to= "/reg" className="authreg" style={{display: isAuth ? 'none' : 'block' }}>Регистрация</Link>
-            <Link className="authreg" style={{display: isAuth ? 'block' : 'none' }} onClick={apiGet}>Выход</Link>
+            <Link to= "/auth" className="authreg" style={{display: isAuth==="true" ? 'none' : 'block' }}>Логин</Link>
+            <Link to= "/reg" className="authreg" style={{display: isAuth==="true" ? 'none' : 'block' }}>Регистрация</Link>
+            <Link className="authreg" style={{display: isAuth==="true" ? 'block' : 'none' }} onClick={apiGet}>Выход</Link>
           </div>
         </div>
       </nav>

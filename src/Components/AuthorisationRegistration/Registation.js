@@ -34,13 +34,13 @@ export default function Registation() {
       if(response.status == 400) {
         setIsError(true)
         setError("Некорректные данные")
-        localStorage.setItem('isAuth', "")
+        localStorage.setItem('isAuth', "false")
         console.log("localStorage" + localStorage.getItem('isAuth'))
       }
       else if(response.status == 401) {
         setIsError(true)
         setError("Что-то не так с серваком (401)")
-        localStorage.setItem('isAuth', "")
+        localStorage.setItem('isAuth', "false")
         console.log("localStorage" + localStorage.getItem('isAuth'))
       }
       else if(response.status == 403) {
@@ -50,13 +50,13 @@ export default function Registation() {
       else if(response.status == 409) {
         setIsError(true)
         setError("Пользователь с таким email уже существует")
-        localStorage.setItem('isAuth', "")
+        localStorage.setItem('isAuth', "false")
         console.log("localStorage" + localStorage.getItem('isAuth'))
       }
       else if(response.status == 500) {
         setIsError(true)
         setError("Что-то не так с серваком (500)")
-        localStorage.setItem('isAuth', "")
+        localStorage.setItem('isAuth', "false")
         console.log("localStorage" + localStorage.getItem('isAuth'))
       }
       else {
