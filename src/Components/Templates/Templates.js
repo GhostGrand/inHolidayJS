@@ -96,7 +96,7 @@ export default function Templates() {
                     </div>
                 </div>
                 
-                <ul>                  
+                <ul className="marginLeftOrder">                  
                     {currentItems.map(item => (
                         <Link  key={item.id} to={'/order/{id}'.replace('{id}', item.id)}>
                             

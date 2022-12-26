@@ -781,6 +781,11 @@ line-height: 38px;
 text-transform: uppercase;
 }
 
+.marginLeftOrder {
+  padding-left: 40px;
+  margin-right: -40px;
+}
+
 input[type=checkbox]
 {
   /* Double-sized Checkboxes */
