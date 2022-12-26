@@ -616,10 +616,12 @@ body {
   flex-direction: row;
   width: 100%;
   margin-top: 30px;
+  padding-right: 5px;
+  /* width: 400px; */
 }
 
 .maincols-item {
-  width: 300px;
+  /* width: 300px; */
   /* display: inline-block; */
 }
 
