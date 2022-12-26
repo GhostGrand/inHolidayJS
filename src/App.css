@@ -505,6 +505,8 @@ body {
   transform: translateY(-50%);
   margin-left: 10px;
   margin-right: 10px;
+  color: #000000;
+  font-weight: 500;
 }
 
 .Profile {
@@ -589,6 +591,10 @@ body {
   display: list-item;
   list-style: inside decimal;
   margin-bottom: 20px;
+}
+
+#paddingL {
+  padding-left: 60px;
 }
 
 .list::-webkit-scrollbar {

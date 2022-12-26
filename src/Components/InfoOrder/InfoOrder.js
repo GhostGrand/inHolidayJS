@@ -35,7 +35,7 @@ export default function InfoOrder() {
       <div key={items.id} className="infoOrderMargin">
         <p className="PAHead">личный кабинет</p>
         <p className="orderFormH1">приглашение "{items.name}"</p>
-        <div className="Rectangle container">
+        <div className="Rectangle container" id="paddingL">
           <div>
             <p className="orderFormH1">Исходный шаблон: <Link to={'/order/{id}'.replace('{id}', template.id)} className="orderFormH1">{template.name}</Link></p>
           </div>
