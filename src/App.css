@@ -616,10 +616,12 @@ body {
   flex-direction: row;
   width: 100%;
   margin-top: 30px;
+  padding-right: 5px;
+  /* width: 400px; */
 }
 
 .maincols-item {
-  width: 300px;
+  /* width: 300px; */
   /* display: inline-block; */
 }
 
@@ -719,11 +721,12 @@ body {
 
 /* -------------------- Шаблоны -------------------- */
 .template-sub-text {
-  padding-top: 20px;
+  padding-top: 30px;
+  margin-bottom: 70px;
   text-align: center;
 
   font-weight: 500;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 17px;
   color: #232727;
 }
