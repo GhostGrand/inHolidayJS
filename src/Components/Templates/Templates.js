@@ -67,6 +67,9 @@ export default function Templates() {
         setCurrentItems(array)
     };
 
+    const whiteBack = `rgba(255, 255, 255, 0.5)`;
+
+
     return(
     <div className="container">
         <div>
@@ -96,8 +99,11 @@ export default function Templates() {
                 <ul>                  
                     {currentItems.map(item => (
                         <Link  key={item.id} to={'/order/{id}'.replace('{id}', item.id)}>
-                            <div className="order">
-                                <img className="order" src={item.previewPath}></img>
+                            
+                            <div className="order" style={{ 
+                                backgroundImage: 'linear-gradient('+ whiteBack + ',' + whiteBack +'), url(' + item.previewPath + ')',
+                                backgroundSize: '100%' 
+                                }}>
                                 <p className="orderName">{item.name}</p>
                                 <p className="orderName">{item.price}</p>
                             </div>
