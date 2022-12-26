@@ -121,7 +121,7 @@ export default function PersonalAccount() {
 
   return (
     
-      <div className = "personalAccount">
+      <div className = "personalAccount container">
         <p className="PAHead">личный кабинет</p>
       
         <div className="MyOrders">

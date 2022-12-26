@@ -100,7 +100,7 @@ export default function TemplateOrderForm() {
             <p className="orderFormH3">Выбрать дату окончания работы приглашения:</p>
             <input id="frmDate" className="form" type="date" name="finishDate" value={formValue.finishDate.value} onChange={handleInput}/>
             <div className="imageOrderForm">
-              <img className="container" src={items.previewPath}></img>
+              <img className="container_for_img" src={items.previewPath}></img>
             </div>
             
             <p className = "orderFormH1">цена: {items.price} руб.</p>
