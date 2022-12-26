@@ -87,8 +87,8 @@ export default function PersonalAccount() {
       body: JSON.stringify({ 
         name: formValue.name == "" || formValue.name == null ? null : formValue.name,
         password: null,
-        phoneNumber: formValue.phoneNumber == "" || formValue.name == null ? null : formValue.phoneNumber,
-        otherCommunication: formValue.otherCommunication == "" || formValue.name == null ? null : formValue.otherCommunication
+        phoneNumber: formValue.name == null ? null : formValue.phoneNumber,
+        otherCommunication: formValue.name == null ? null : formValue.otherCommunication
       })
     })
     .then(response => {
