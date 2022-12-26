@@ -52,7 +52,7 @@ export default function Main() {
             </div>
 
             <div className="mockup_image">
-                <img src={require('./content/mockup.png')} className="mockup_image"/>
+                <img src={require('./content/mockup2.png')} className="mockup_image"/>
             </div>
 
             <div>
