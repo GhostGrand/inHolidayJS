@@ -336,6 +336,10 @@ body {
   /* width: 30%; */
   padding-top: 60px;
   margin-bottom: 60px;
+  margin-right: 80px;
+  margin-left: 10px;
+  /* padding-left: 40px; */
+  /* width: 100%; */
   
 }
 .footerbar-menu a {
